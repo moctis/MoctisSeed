@@ -1,1 +1,3 @@
-document.write("Hello, loader!");
+(function() {
+  document.write("Hello, loader!");
+})();
