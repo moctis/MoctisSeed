@@ -4,9 +4,10 @@ getScript = function($src) {
   document.head.appendChild(imported);
 }
   
-(function() {
-  document.writeln("Hello, World");
+document.addEventListener("DOMContentLoaded", function() {
+   document.writeln("Hello, World");
   getScript("loader.js");
-})();
+});
+  
 
 
