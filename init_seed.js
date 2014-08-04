@@ -5,7 +5,7 @@ getScript = function($src) {
 }
   
 document.addEventListener("DOMContentLoaded", function() {
-   document.writeln("Hello, World");
+   document.writeln("Hello, World<br/>");
   getScript("loader.js");
 });
   
