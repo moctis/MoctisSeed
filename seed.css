@@ -1,0 +1,14 @@
+.seed {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-style: dashed;
+  border-width: 1px;
+  line-height: 1em;
+  margin: 0;
+  border-color: #aaa;
+  word-break: break-all;
+  background: #fdfdfd;
+}
