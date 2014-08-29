@@ -4,7 +4,7 @@
 (function() {
 seed = function(url, callback, t) {
     var el, doc = document;
-    t = t?t:'script';
+    if (t==undefined) t ='script';
     el = doc.createElement(t);
     if (t == 'script') {
         el.src = url;    
