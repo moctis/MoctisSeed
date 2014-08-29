@@ -4,14 +4,16 @@
 (function() {
 seed = function(url, callback, t) {
     var el, doc = document;
-    if (t==undefined) t ='script';
-    el = doc.createElement(t);
-    if (t == 'script') {
-        el.src = url;    
-    } else if (t == 'link') {
+    
+    
+    
+  if (t == 'link') {
+el = doc.createElement(t);
         rel = 'stylesheet';
         el.href = url;    
-    }
+    } else { el = doc.createElement('script');
+el.src = url;
+}
     if (callback) {
         el.addEventListener('load', function (e) { callback(e); }, false);
     }
