@@ -1,6 +1,23 @@
-<html>
-<body>
-  test
-  <script src="init_seed.js" type="text/javascript"></script>
-</body>
-</html>
+<!DOCTYPE html>
+<html><body> 
+<script type="text/javascript">
+(function() {
+seed = function(url, callback, t) {
+    var el, doc = document;
+    t = t?t:'script';
+    el = doc.createElement(t);
+    if (t == 'script') {
+        el.src = url;    
+    } else if (t == 'link') {
+        rel = 'stylesheet';
+        el.href = url;    
+    }
+    if (callback) {
+        el.addEventListener('load', function (e) { callback(e); }, false);
+    }
+    doc.getElementsByTagName('body')[0].appendChild(el);
+}; 
+seed("seed.js"); 
+})();
+</script>
+</body></html>
