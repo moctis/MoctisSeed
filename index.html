@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html>
 
   <head>
@@ -77,3 +78,29 @@ $ git checkout gh-pages
 
   </body>
 </html>
+=======
+<html><body> 
+<script type="text/javascript">
+(function() {
+seed = function(url, callback, t) {
+    var el, doc = document;
+    
+    
+    
+  if (t == 'link') {
+el = doc.createElement(t);
+        rel = 'stylesheet';
+        el.href = url;    
+    } else { el = doc.createElement('script');
+el.src = url;
+}
+    if (callback) {
+        el.addEventListener('load', function (e) { callback(e); }, false);
+    }
+    doc.getElementsByTagName('body')[0].appendChild(el);
+}; 
+seed("seed.js"); 
+})();
+</script>
+</body></html>
+>>>>>>> origin/master
