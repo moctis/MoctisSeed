@@ -3,16 +3,17 @@
 <script type="text/javascript">
 (function() {
 seed = function(url, callback, t) {
-    var el, doc = document;
-    
-    
-    
-  if (t == 'link') {
-el = doc.createElement(t);
+  document.write('hello');
+
+ 
+ var el, doc = document;
+    if (t == 'link') {
+        el = doc.createElement(t);
         rel = 'stylesheet';
         el.href = url;    
-    } else { el = doc.createElement('script');
-el.src = url;
+    } else {
+       el = doc.createElement('script');
+       el.src = url;
 }
     if (callback) {
         el.addEventListener('load', function (e) { callback(e); }, false);
